@@ -1,0 +1,38 @@
+name: manage-azure-policy-e358c8a7
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policy/policies/LocationPolicies/policies/Allowed_locations_e56962a6-4747-49cd-b67b-bf8b01975c4c/**'
+#      - 'policy/policies/LocationPolicies/policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**'
+#      - 'policy/policies/LocationPolicies/policies/Audit_resource_location_matches_resource_group_location_0a914e76-4921-4c19-b460-a2d36003525a/**'
+#      - 'policy/policies/LocationPolicies/policies/Allowed_locations_for_resource_groups_e765b5de-1225-4ba3-bd56-1ac6695af988/**'
+#      - .github/workflows/manage-azure-policy-e358c8a7.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_e358c8a7}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policy/policies/LocationPolicies/policies/Allowed_locations_e56962a6-4747-49cd-b67b-bf8b01975c4c/**
+          policy/policies/LocationPolicies/policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**
+          policy/policies/LocationPolicies/policies/Audit_resource_location_matches_resource_group_location_0a914e76-4921-4c19-b460-a2d36003525a/**
+          policy/policies/LocationPolicies/policies/Allowed_locations_for_resource_groups_e765b5de-1225-4ba3-bd56-1ac6695af988/**
