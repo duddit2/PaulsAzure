@@ -10,17 +10,17 @@ on:
 
 ## Uncomment the following if you wish to automatically trigger workflow run with every commit
 #
-#  push:
-#    paths:
+  push:
+    paths:
 #      - 'policy/initiatives/NIST_SP_800-171_Rev._2_03055927-78bd-4236-86c0-f36125a10dc9/**'
 #      - 'policy/initiatives/Audit_machines_with_insecure_password_security_settings_095e4ed9-c835-4ab6-9439-b5644362a06c/**'
 #      - 'policy/initiatives/Configure_Linux_machines_to_run_Azure_Monitor_Agent_and_associate_them_to_a_Data_Collection_Rule_118f04da-0375-44d1-84e3-0fd9e1849403/**'
 #      - 'policy/initiatives/NIST_SP_800-53_Rev._5_179d1daa-458f-4e47-8086-2a68d0d6c38f/**'
 #      - 'policy/initiatives/Deploy_prerequisites_to_enable_Guest_Configuration_policies_on_virtual_machines_12794019-7a00-42cf-95c2-882eed337cc8/**'
 #      - 'policy/initiatives/CIS_Microsoft_Azure_Foundations_Benchmark_v1.1.0_1a5bb27d-173f-493e-9568-eb56638dde4d/**'
-#      - 'policy/initiatives/Azure_Security_Benchmark_1f3afdf9-d0c9-4c3d-847f-89da613e70a8/**'
-#      - 'policy/initiatives/UK_OFFICIAL_and_UK_NHS_3937f550-eedd-4639-9c5e-294358be442e/**'
-#      - 'policy/initiatives/_Preview_Configure_Azure_Defender_for_SQL_agents_on_virtual_machines_39a366e6-fdde-4f41-bbf8-3757f46d1611/**'
+      - 'policy/initiatives/Azure_Security_Benchmark_1f3afdf9-d0c9-4c3d-847f-89da613e70a8/**'
+      - 'policy/initiatives/UK_OFFICIAL_and_UK_NHS_3937f550-eedd-4639-9c5e-294358be442e/**'
+      - 'policy/initiatives/_Preview_Configure_Azure_Defender_for_SQL_agents_on_virtual_machines_39a366e6-fdde-4f41-bbf8-3757f46d1611/**'
 #      - 'policy/initiatives/_Preview_SWIFT_CSP-CSCF_v2020_3e0c67fc-8c7c-406c-89bd-6b6bdc986a22/**'
 #      - 'policy/initiatives/Kubernetes_cluster_pod_security_restricted_standards_for_Linux-based_workloads_42b8ef37-b724-4e24-bbc8-7a7708edfe00/**'
 #      - 'policy/initiatives/PCI_v3.2.1_2018_496eeda9-8f2f-4d5e-8dfd-204f0a92ed41/**'
